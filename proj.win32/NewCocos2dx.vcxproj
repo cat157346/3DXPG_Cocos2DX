@@ -145,13 +145,11 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\Scene101\Scene101.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\Scene101\Scene101.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
@@ -171,27 +169,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ResourceCompile Include="game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="..\Resources\fonts\arial.ttf" />
-    <Font Include="..\Resources\fonts\HKYuanMini.ttf" />
-    <Font Include="..\Resources\fonts\Marker Felt.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Resources\fonts\bx.fnt" />
-    <None Include="..\Resources\fonts\couriernew.fnt" />
-    <None Include="..\Resources\fonts\couriernew48.fnt" />
-    <None Include="..\Resources\fonts\hansans.fnt" />
-    <None Include="..\Resources\fonts\hansans64.fnt" />
-    <None Include="..\Resources\fonts\tt.fnt" />
+    <None Include="..\Resources\fonts\couriernew32.fnt" />
+    <None Include="..\Resources\fonts\hansans48.fnt" />
     <None Include="..\Resources\scene101\scene101.plist" />
     <None Include="..\Resources\scene101\scene101.tps" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Resources\fonts\bx_0.png" />
-    <Image Include="..\Resources\fonts\couriernew.png" />
-    <Image Include="..\Resources\fonts\couriernew48.png" />
-    <Image Include="..\Resources\fonts\hansans.png" />
-    <Image Include="..\Resources\fonts\hansans64_0.png" />
-    <Image Include="..\Resources\fonts\tt_0.png" />
+    <Image Include="..\Resources\fonts\couriernew32_0.png" />
+    <Image Include="..\Resources\fonts\hansans48_0.png" />
     <Image Include="..\Resources\scene101\bean01.png" />
     <Image Include="..\Resources\scene101\bean02.png" />
     <Image Include="..\Resources\scene101\bean03.png" />
@@ -217,6 +202,11 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <Image Include="..\Resources\scene101\sr_f_triangle.png" />
     <Image Include="..\Resources\scene101\sr_line1.png" />
     <Image Include="..\Resources\scene101\sr_line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Resources\fonts\arial.ttf" />
+    <Font Include="..\Resources\fonts\HKYuanMini.ttf" />
+    <Font Include="..\Resources\fonts\Marker Felt.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Resources\scene101\bmfontexample.txt" />

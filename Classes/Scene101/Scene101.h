@@ -12,7 +12,12 @@ private:
 	cocos2d::Rect    rectCuber;
 	cocos2d::Rect    rectReplay;
 	cocos2d::Rect    rectReturn;
-//	cocos2d::Label *label1;
+
+	cocos2d::Sprite *bean;
+	cocos2d::Point   cpt;//起始點位置
+	cocos2d::Rect    rectbean;//豆豆觸發
+
+
 	int  _sceneno;
 	char _cSceneNo[10];
 
