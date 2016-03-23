@@ -141,6 +141,8 @@ bool  Scene101::onTouchBegan(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)//�
 
 	if (rectbean.containsPoint(touchLoc)) {
 		cpt = bean->getPosition();
+		Size size = bean->getContentSize();
+		rectbean = Rect(cpt.x - size.width / 2, cpt.y - size.height / 2, size.width, size.height);
 	}
 
 	return true;
@@ -149,8 +151,19 @@ bool  Scene101::onTouchBegan(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)//�
 void  Scene101::onTouchMoved(cocos2d::Touch *pTouch, cocos2d::Event *pEvent) //觸碰移動事件
 {
 	Point touchLoc = pTouch->getLocation();
-	Point dirx = touchLoc - cpt;
-	cpt = touchLoc;
+
+	if (rectbean.containsPoint(touchLoc)) {
+		Point dirx = touchLoc - cpt;
+		bean->setPosition(cpt + dirx);
+
+		Size size = bean->getContentSize();
+		rectbean = Rect(cpt.x + dirx.x - size.width / 2, cpt.y + dirx.y - size.height / 2, size.width, size.height);
+
+		cpt = touchLoc;
+	}
+	
+
+	
 }
 
 void  Scene101::onTouchEnded(cocos2d::Touch *pTouch, cocos2d::Event *pEvent) //觸碰結束事件 
